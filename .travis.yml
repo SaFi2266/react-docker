@@ -7,4 +7,4 @@ before_install:
   - docker build -t safi/react-app -f Dockerfile.dev .
 
 script:
-  - docker run safi/react-app npm run test -- --coverage
+  - docker run -e CI=true safi/react-app npm run test -- --coverage
